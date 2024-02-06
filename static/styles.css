@@ -153,12 +153,6 @@ body {
 	align-self: flex-end;
 }
 
-iframe {
-	background-color: var(--overlay-color);
-	border: 0;
-	width: 100%;
-}
-
 /* overrides for small screen */
 @media (max-width: 600px) {
 	#content .sticker-box {

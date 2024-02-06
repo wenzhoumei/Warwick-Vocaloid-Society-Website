@@ -5,7 +5,6 @@ app = Flask(__name__)
 # Define the routes and their corresponding names
 routes = [
         ("/about", "ABOUT"),
-        ("/news", "NEWS"),
         ("/calendar", "CALENDAR"),
         ("/resources", "RESOURCES"),
         ("/contact", "CONTACT"),
@@ -14,10 +13,6 @@ routes = [
 @app.route("/about")
 def about():
     return render_template("about.html")
-
-@app.route("/news")
-def news():
-    return render_template("news.html")
 
 @app.route("/calendar")
 def calendar():
