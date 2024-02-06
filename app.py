@@ -2,14 +2,6 @@ from flask import Flask, render_template, redirect, url_for
 
 app = Flask(__name__)
 
-# Define the routes and their corresponding names
-routes = [
-        ("/about", "ABOUT"),
-        ("/calendar", "CALENDAR"),
-        ("/resources", "RESOURCES"),
-        ("/contact", "CONTACT"),
-]
-
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -18,9 +10,9 @@ def about():
 def calendar():
     return render_template("calendar.html")
 
-@app.route("/resources")
+@app.route("/showcase")
 def resources():
-    return render_template("resources.html")
+    return render_template("showcase.html")
 
 @app.route("/contact")
 def contact():
