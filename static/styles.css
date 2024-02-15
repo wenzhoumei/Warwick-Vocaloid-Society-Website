@@ -151,6 +151,9 @@ body {
 
   /* location */
 	align-self: flex-end;
+
+  /* sizing */
+  max-height: 200px;
 }
 
 /* overrides for small screen */

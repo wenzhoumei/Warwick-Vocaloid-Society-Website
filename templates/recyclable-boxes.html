@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Recyclable Boxes
+{% endblock %}
+
+{% block content %}
+  <div style="--overlay-color: #bbe6e0;" class="sticker-box">
+    <div class="box-info">
+      <h2>Welcome</h2>
+      <p>
+      Warwick Vocaloid Society (WVS) is Warwick's student-run society for anyone with an interest in vocaloid. The society is for anyone who would like to meet others who share these interests, or who just want to join us for one of the many events we run each academic year.
+      </p>
+      <p>
+      Most of our society communications are made through our <a href="https://www.instagram.com/warwick_vocaloid/">instagram</a> or our <a href="https://discord.gg/NXYVdzZpr5">discord server</a>. Our discord is also a good place to meet and discuss vocaloid with other members of the society.
+      </p>
+    </div>
+
+    <img class="sticker" src={{ url_for('static', filename='assets/miku-wave.png') }}>
+  </div>
+  </br>
+{% endblock %}

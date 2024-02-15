@@ -18,6 +18,10 @@ def resources():
 def contact():
     return render_template("contact.html")
 
+@app.route("/recyclable-boxes")
+def recyclable_boxes():
+    return render_template("recyclable-boxes.html")
+
 @app.route("/")
 def home():
     return redirect(url_for("about"))
