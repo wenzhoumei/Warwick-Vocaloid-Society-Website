@@ -11,8 +11,11 @@
 
     <!-- title -->
     <title>
-      WVS - {% block title %}{% endblock %}
+      {% block title %}{% endblock %}
     </title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
   </head>
   <body>
 
