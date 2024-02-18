@@ -135,6 +135,12 @@ body {
 	height: fit-content;
 }
 
+#instagram-iframe {
+	background-color: var(--overlay-color);
+	border: 0;
+	width: 100%;
+}
+
 #content {
   /* margin */
 	margin: 12px;
