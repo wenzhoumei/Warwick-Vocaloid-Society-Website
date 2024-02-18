@@ -31,7 +31,16 @@ body {
 
   /* dynamic display settings */
 	display: flex;
-	overflow: hidden;
+  overflow: hidden;
+
+	/* fixed positioning */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* You can adjust the z-index based on your layout */
+
+  /* shadow */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
 }
 
 .nav-list {
@@ -94,6 +103,9 @@ body {
 	height: 100%;
 }
 
+#content {
+  padding-top: 70px; /* Adjust this value to match the height of your navbar */
+}
 
 #content > .sticker-box {
   /* background */
