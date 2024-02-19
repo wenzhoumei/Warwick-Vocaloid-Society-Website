@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- stuff -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- styling -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel=stylesheet href={{ url_for('static', filename='styles.css') }}>
+<head>
+  <!-- stuff -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- title -->
-    <title>
-      {% block title %}{% endblock %}
-    </title>
+  <!-- styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel=stylesheet href={{ url_for('static', filename='styles.css' ) }}>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-  </head>
-  <body>
+  <!-- title -->
+  <title>
+    {% block title %}{% endblock %}
+  </title>
 
-    <!-- navbar -->
-    <nav id="navbar">
-      <a href="/about" id="navbar-logo"><img src={{ url_for('static', filename='assets/logo.webp') }} alt="WVS Logo"></a>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
 
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          {% block about_nav %}
-          <a href="./about" class="nav-link">ABOUT</a>
-          {% endblock %}
-        </li>
+<body>
 
-       <li class="nav-list-item">
-          {% block calendar_nav %}
-          <a href="./calendar" class="nav-link">CALENDAR</a>
-          {% endblock %}
-        </li>
+  <!-- navbar -->
+  <nav id="navbar">
+    <a href="/about" id="navbar-logo"><img src={{ url_for('static', filename='assets/logo.webp' ) }} alt="WVS Logo"></a>
 
-        <li class="nav-list-item">
-          {% block contact_nav %}
-          <a href="./contact" class="nav-link">CONTACT</a>
-          {% endblock %}
-        </li>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        {% block about_nav %}
+        <a href="./about" class="nav-link">ABOUT</a>
+        {% endblock %}
+      </li>
 
-        <li class="nav-list-item">
-          {% block showcase_nav %}
-          <a href="./showcase" class="nav-link">SHOWCASE</a>
-          {% endblock %}
-        </li>
-      </ul>
-    </nav>
+      <li class="nav-list-item">
+        {% block calendar_nav %}
+        <a href="./calendar" class="nav-link">CALENDAR</a>
+        {% endblock %}
+      </li>
 
-    <!-- content -->
-    <div id="content">
-      {% block content %}{% endblock %}
-    </div>
-  </body>
+      <li class="nav-list-item">
+        {% block contact_nav %}
+        <a href="./contact" class="nav-link">CONTACT</a>
+        {% endblock %}
+      </li>
+
+      <li class="nav-list-item">
+        {% block showcase_nav %}
+        <a href="./showcase" class="nav-link">SHOWCASE</a>
+        {% endblock %}
+      </li>
+    </ul>
+  </nav>
+
+  <!-- content -->
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+
 </html>

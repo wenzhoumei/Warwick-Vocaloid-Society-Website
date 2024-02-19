@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-	Contact
+Contact
 {% endblock %}
 
 {% block contact_nav %}
-	<a href="./contact" style="text-shadow:0px 0px 1px black;" class="nav-link">CONTACT</a>
+<a href="./contact" style="text-shadow:0px 0px 1px black;" class="nav-link">CONTACT</a>
 {% endblock %}
 
 {% block content %}
@@ -13,15 +13,15 @@
 	<div class="box-info">
 		<h1> Current Execs </h1>
 		<ul>
-      <li> Tatsunori Ono (<b>President</b>): tatsunori.ono@warwick.ac.uk
-        <li> Hashim Yasin (<b>Audio Engineer</b> and <b>Welfare Officer</b>): hashim.yasin@warwick.ac.uk
-          <li> Damian Kwok (<b>Secretary</b>): damian.kwok@warwick.ac.uk
-            <li> Raymond Zhou (<b>Treasurer</b>): raymond.zhou@warwick.ac.uk
-              <li> Wenzhou Mei (<b>Webmaster</b>): wenzhou.mei@warwick.ac.uk
+			<li> Tatsunori Ono (<b>President</b>): tatsunori.ono@warwick.ac.uk
+			<li> Hashim Yasin (<b>Audio Engineer</b> and <b>Welfare Officer</b>): hashim.yasin@warwick.ac.uk
+			<li> Damian Kwok (<b>Secretary</b>): damian.kwok@warwick.ac.uk
+			<li> Raymond Zhou (<b>Treasurer</b>): raymond.zhou@warwick.ac.uk
+			<li> Wenzhou Mei (<b>Webmaster</b>): wenzhou.mei@warwick.ac.uk
 		</ul>
 	</div>
 
-	<img class="sticker" src={{ url_for('static', filename='assets/hello.png') }}>
+	<img class="sticker" src={{ url_for('static', filename='assets/hello.png' ) }}>
 </div>
 <br>
 {% endblock %}
