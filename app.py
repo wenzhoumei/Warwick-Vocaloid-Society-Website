@@ -6,9 +6,9 @@ app = Flask(__name__)
 def about():
     return render_template("about.html")
 
-@app.route("/calendar")
+@app.route("/events")
 def calendar():
-    return render_template("calendar.html")
+    return render_template("events.html")
 
 @app.route("/showcase")
 def resources():
