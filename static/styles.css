@@ -25,6 +25,9 @@ body {
 }
 
 #navbar {
+	/* scroll transition time */
+	transition: top 0.2s;
+
 	/* sizing/structure */
 	font-size: 16px;
 	height: 70px;
