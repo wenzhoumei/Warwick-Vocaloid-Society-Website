@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- styling -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link rel=stylesheet href={{ url_for('static', filename='styles.css' ) }}>
 
   <!-- title -->
@@ -23,33 +22,33 @@
 
   <!-- navbar -->
   <nav id="navbar">
-    <a href="/about" id="navbar-logo"><img src={{ url_for('static', filename='assets/logo.webp' ) }} alt="WVS Logo"></a>
+      <a href="/about" id="navbar-logo"><img src={{ url_for('static', filename='assets/logo.webp' ) }} alt="WVS Logo"></a>
 
-    <ul class="nav-list">
-      <li class="nav-list-item">
-        {% block about_nav %}
-        <a href="./about" class="nav-link">ABOUT</a>
-        {% endblock %}
-      </li>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          {% block about_nav %}
+          <a href="./about" class="nav-link">ABOUT</a>
+          {% endblock %}
+        </li>
 
-      <li class="nav-list-item">
-        {% block calendar_nav %}
-        <a href="./calendar" class="nav-link">CALENDAR</a>
-        {% endblock %}
-      </li>
+        <li class="nav-list-item">
+          {% block events_nav %}
+          <a href="./events" class="nav-link">EVENTS</a>
+          {% endblock %}
+        </li>
 
-      <li class="nav-list-item">
-        {% block contact_nav %}
-        <a href="./contact" class="nav-link">CONTACT</a>
-        {% endblock %}
-      </li>
+        <li class="nav-list-item">
+          {% block contact_nav %}
+          <a href="./contact" class="nav-link">CONTACT</a>
+          {% endblock %}
+        </li>
 
-      <li class="nav-list-item">
-        {% block showcase_nav %}
-        <a href="./showcase" class="nav-link">SHOWCASE</a>
-        {% endblock %}
-      </li>
-    </ul>
+        <li class="nav-list-item">
+          {% block showcase_nav %}
+          <a href="./showcase" class="nav-link">SHOWCASE</a>
+          {% endblock %}
+        </li>
+      </ul>
   </nav>
 
   <!-- content -->

@@ -1,147 +1,159 @@
+@font-face {
+	font-family: 'Roboto Condensed';
+	src: url('/static/Roboto_Condensed/static/RobotoCondensed-Regular.ttf');
+} 
+
 :root {
 	--overlay-color: #bbe6e0;
 }
 
 body {
-  /* default font */
+	/* default font */
 	font-family: 'Roboto Condensed', serif;
 	font-size: 20px;
 
-  /* background */
+	/* background */
 	background: linear-gradient(135deg, #c1d6d8 25%, transparent 25%) -30px 0,
-	linear-gradient(-135deg, #c1d6d8 25%, transparent 25%) -30px 0,
-	linear-gradient(45deg, #c1d6d8 25%, transparent 25%),
-	linear-gradient(-45deg, #c1d6d8 25%, transparent 25%);
+		linear-gradient(-135deg, #c1d6d8 25%, transparent 25%) -30px 0,
+		linear-gradient(45deg, #c1d6d8 25%, transparent 25%),
+		linear-gradient(-45deg, #c1d6d8 25%, transparent 25%);
 	background-size: 100px 100px;
 	background-color: #eee;
 
-  /* other */
+	/* other */
 	margin: 0;
 }
 
 #navbar {
-  /* sizing/structure */
+	/* sizing/structure */
 	font-size: 16px;
 	height: 70px;
-  padding: 0;
+	padding: 0;
 	align-items: center;
 
-  /* background */
+
+	/* background */
 	background-color: #fff;
 
-  /* dynamic display settings */
+
+	/* dynamic display settings */
 	display: flex;
-  overflow: hidden;
+	justify-content: center;
+	overflow: hidden;
 
 	/* fixed positioning */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* You can adjust the z-index based on your layout */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 
-  /* shadow */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+	/* add shadow effect below navbar */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+	/* make text unselectable */
+	user-select: none;
 }
 
 .nav-list {
-  position: relative;
-  box-sizing: border-box;
-  padding: 0;
+	position: relative;
+	box-sizing: border-box;
+	padding: 0;
 }
 
 .nav-list:before {
-  content: '|';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: 100%;
-  background: white;
-  color: transparent;
-  z-index: 1;
+	content: '|';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: 100%;
+	background: white;
+	color: transparent;
+	z-index: 1;
 }
 
 .nav-list-item {
-  display: inline-block;
+	display: inline-block;
 }
 
 .nav-list-item:before {
-  content: '|';
-  display: inline-block;
+	content: '|';
+	display: inline-block;
 }
 
 
 .nav-link {
-  /* text styling */
+	/* text styling */
 	color: black;
 	text-decoration: none;
 
-  /* text padding */
+	/* text padding */
 	padding: 0 12px;
 
-  /* dynamic display settings */
-	display: inline; /* TODO */
+	/* dynamic display settings */
+	display: inline;
 }
 
 .nav-text:hover {
-  /* styling */
-	text-shadow:0px 0px 1px black;
+	/* styling */
+	text-shadow: 0px 0px 1px black;
 }
 
 #navbar-logo {
-  /* sizing */
-	height: 70%;
+	/* sizing */
+	height: 60%;
 
-  /* margin */
-	margin-left: 10px;
-	margin-right: 5px;
+	/* padding */
+	padding-left: 10px;
+	padding-right: 5px;
 }
 
-#navbar-logo > img {
-  /* sizing */
+#navbar-logo>img {
+	/* sizing */
 	height: 100%;
 }
 
 #content {
-  padding-top: 70px; /* Adjust this value to match the height of your navbar */
+	padding-top: 70px;
+	/* Adjust this value to match the height of your navbar */
 }
 
-#content > .sticker-box {
-  /* background */
+#content>.sticker-box {
+	/* background */
 	background: linear-gradient(135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
-	linear-gradient(-135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
-	linear-gradient(45deg, var(--overlay-color) 25%, transparent 25%),
-	linear-gradient(-45deg, var(--overlay-color) 25%, transparent 25%);
+		linear-gradient(-135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
+		linear-gradient(45deg, var(--overlay-color) 25%, transparent 25%),
+		linear-gradient(-45deg, var(--overlay-color) 25%, transparent 25%);
 	background-color: #eee;
 	background-size: 80px 80px;
 
-  /* box structure */
+	/* box structure */
 	padding: 7px 11px;
 	border: 0px;
 	border-radius: 10px;
 
-  /* display options */
+	/* display options */
 	overflow: auto;
 	display: flex;
 	width: fit-content;
 }
 
-#content > .box {
-  /* background */
+#content>.box {
+	/* background */
 	background: linear-gradient(135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
-	linear-gradient(-135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
-	linear-gradient(45deg, var(--overlay-color) 25%, transparent 25%),
-	linear-gradient(-45deg, var(--overlay-color) 25%, transparent 25%);
+		linear-gradient(-135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
+		linear-gradient(45deg, var(--overlay-color) 25%, transparent 25%),
+		linear-gradient(-45deg, var(--overlay-color) 25%, transparent 25%);
 	background-color: #eee;
 	background-size: 80px 80px;
 
-  /* box structure */
+	/* box structure */
 	padding: 7px 11px;
 	border: 0px;
 	border-radius: 10px;
 
-  /* display options */
+	/* display options */
 	overflow: auto;
 	width: border-box;
 	height: fit-content;
@@ -154,24 +166,27 @@ body {
 }
 
 #content {
-  /* margin */
-	margin: 12px;
+	/* margin */
+	margin: auto;
+	margin-top: 20px;
+	padding-left: 12px;
+	padding-right: 12px;
 
-  max-width: 1000px; /* TODO */
+	max-width: 1000px;
 
-  /* text styling */
+	/* text styling */
 	font-weight: 500;
 }
 
-.sticker-box > .sticker {
-  /* margin */
+.sticker-box>.sticker {
+	/* margin */
 	margin-left: 20px;
 
-  /* location */
+	/* location */
 	align-self: flex-end;
 
-  /* sizing */
-  max-height: 200px;
+	/* sizing */
+	max-height: 200px;
 }
 
 /* overrides for small screen */
