@@ -66,6 +66,7 @@ body {
 	position: relative;
 	box-sizing: border-box;
 	padding: 0;
+  overflow: hidden;
 }
 
 .nav-list:before {
@@ -150,6 +151,17 @@ body {
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
 }
 
+.sticker-box>.sticker {
+	/* margin */
+	margin-left: 20px;
+
+	/* location */
+	align-self: flex-end;
+
+	/* sizing */
+	max-height: 200px;
+}
+
 #content>.box {
 	/* background */
 	background: linear-gradient(135deg, var(--overlay-color) 25%, transparent 25%) -30px 0,
@@ -192,28 +204,34 @@ body {
 	font-weight: 500;
 }
 
-.sticker-box>.sticker {
-	/* margin */
-	margin-left: 20px;
-
-	/* location */
-	align-self: flex-end;
-
-	/* sizing */
-	max-height: 200px;
-}
-
 /* overrides for small screen */
 @media (max-width: 600px) {
-	#content .sticker-box {
+	#content>.sticker-box {
 		display: block;
 		width: auto;
 	}
 
-	.sticker {
-		margin-right: 20px;
-		float: right;
+  .sticker-box>.sticker {
+		margin-left: 20px;
+		float: left;
+    max-height: 100px;
 	}
+
+  body {
+	  font-size: 16px;
+  }
+
+  #navbar {
+	  font-size: 14px;
+  }
+
+  #navbar-logo {
+    /* sizing */
+    height: 50%;
+
+    /* padding */
+    padding-right: 3px;
+  }
 }
 
 /* scrollbar */
