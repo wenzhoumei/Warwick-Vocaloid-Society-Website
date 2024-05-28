@@ -26,5 +26,3 @@ window.onscroll = () => {
     initialScroll = false;
   }
 }
-
-navlinks = document.getElementsByClassName("navlink");
